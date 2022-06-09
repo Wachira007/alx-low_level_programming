@@ -1,19 +1,19 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
-
 /**
- * main - entry point
- * return 0 - success
- * */
+ * print_alphabet_x10- prints the alphabet letters 1to 10 ten times
+ * Return;
+ */
 
-int main (void)
+void print_alphabet_x10(void)
 {
-	char letter;
-	for letter = 'a'; letter <= 'z'; letter++)
+	int x, y;
+
+	for (x = 0; x < 10; x++)
 	{
-		putchar(letter);
+		for (y = 'a'; y <= 'z'; y++)
+		{
+			_putchar(y);
+		}
+	_putchar('\n');
 	}
-	putchar('\n');
-	return (0);
 }
