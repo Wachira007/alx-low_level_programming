@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
 *more_numbers- prints more numbers
 *Return:
