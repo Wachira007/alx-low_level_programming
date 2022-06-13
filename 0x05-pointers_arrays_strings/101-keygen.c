@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - generates keygen.
- * Return: 0 Always.
- */
+*main - generates pseudo reandom bytes
+*Return: 0 
+*/
 int main(void)
 {
 	int r = 0, q = 0;
