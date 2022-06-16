@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print pairs of double digits 
+ * main - print pairs of double digits
  * Description: print pairs of double digit combos
  * Return: 0
  */
