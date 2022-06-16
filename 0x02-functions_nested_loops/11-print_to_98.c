@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-*print_to)98 - n to 98
+*print_to_98 - n to 98
 *@n: start point
 *Return: 0
 */
