@@ -2,43 +2,41 @@
 #include <stdlib.h>
 
 /**
-*str_concat- concatenate two strings
-*
-*@s1: string 1
-*@s2: string 2
-*Return: 2nd string
+*str_concat - concatenates two strings.
+*@s1: first string.
+*@s2: second string.
+*Return: pointer of an array of chars
 */
-
 char *str_concat(char *s1, char *s2)
 {
-	char *sout;
-	unsigned int x, y, z, limit;
+	char *strout;
+	unsigned int i, j, k, limit;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (x = 0; s1[x] != '\0'; x++)
+	for (i = 0; s1[i] != '\0'; i++)
 		;
 
-	for (y = 0; s2[y] != '\0'; y++)
+	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	sout = malloc(sizeof(char) * (x + y + 1));
+	strout = malloc(sizeof(char) * (i + j + 1));
 
-	if (sout == NULL)
+	if (strout == NULL)
 	{
-		free(sout);
+		free(strout);
 		return (NULL);
 	}
 
-	for (z = 0; z < i; z++)
-		sout[z] = s1[z];
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
 
-	limit = y;
-	for (y = 0; y <= limit; z++, y++)
-		sout[z] = s2[y];
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
 
-	return (sout);
+	return (strout);
 }
