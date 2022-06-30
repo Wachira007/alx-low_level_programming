@@ -2,17 +2,16 @@
 #include <stdlib.h>
 
 /**
-*string_nconcat - concatenates 2 strings
-*@s1: string 1
-*@s2: string 2
-*@n: bytes amounts
-*Return: pointer to the allocated memory
+*string_nconcat - concatenates two strings.
+*@s1: first string.
+*@s2: second string.
+*@n: amount of bytes.
+*Return: pointer to the allocated memory.
 */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *sout;
-	unsigned int x, y, lsout, i;
+	unsigned int ls1, ls2, lsout, i;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -20,16 +19,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (x = 0; s1[x] != '\0'; x++)
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		;
 
-	for (y = 0; s2[y] != '\0'; y++)
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
 		;
 
-	if (n > y)
-		n = y;
+	if (n > ls2)
+		n = ls2;
 
-	lsout = x + n;
+	lsout = ls1 + n;
 
 	sout = malloc(lsout + 1);
 
@@ -40,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (i < ls1)
 			sout[i] = s1[i];
 		else
-			sout[i] = s2[i - x];
+			sout[i] = s2[i - ls1];
 
 	sout[i] = '\0';
 
