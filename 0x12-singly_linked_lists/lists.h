@@ -6,10 +6,11 @@
 #include <string.h>
 
 /**
-struct list_s - linked list
+*struct list_s - linked list
 *@str: string -malloc
 *@len: string length
 *@next: next node
+*description: singly linked list node structure
 */
 
 typedef struct list_s
